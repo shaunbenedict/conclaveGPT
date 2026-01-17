@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "94855135619",
+    "project_id": "conclavegpt-6ac77",
+    "storage_bucket": "conclavegpt-6ac77.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94855135619:android:5a4f532bb277f9367b76b6",
+        "android_client_info": {
+          "package_name": "com.example.conclavegpt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiZtyzvbvnp3tUvqJgViJaa_8oPdlbDGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
