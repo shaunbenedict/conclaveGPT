@@ -62,7 +62,7 @@ class _AuthPageState extends State<AuthPage> {
           gradient: LinearGradient(
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
-            colors: [Color(0xFF1B1B1B), Color(0xFF0D0D0D)],
+            colors: [Color(0xFF061E29), Color(0xFF0C7779)],
           ),
         ),
         child: SafeArea(
@@ -77,7 +77,7 @@ class _AuthPageState extends State<AuthPage> {
                     style: TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xFF00C853),
+                      color: Color(0xFF3BC1A8),
                     ),
                   ),
                   const SizedBox(height: 12),
@@ -91,18 +91,18 @@ class _AuthPageState extends State<AuthPage> {
                     decoration: InputDecoration(
                       hintText: 'Email',
                       filled: true,
-                      fillColor: const Color(0xFF2B2B2B),
+                      fillColor: const Color(0xFF0C7779),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: const BorderSide(
-                          color: Color(0xFF00C853),
+                          color: Color(0xFF3BC1A8),
                           width: 1,
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: const BorderSide(
-                          color: Color(0xFF00C853),
+                          color: Color(0xFF3BC1A8),
                           width: 2,
                         ),
                       ),
@@ -115,18 +115,18 @@ class _AuthPageState extends State<AuthPage> {
                     decoration: InputDecoration(
                       hintText: 'Password',
                       filled: true,
-                      fillColor: const Color(0xFF2B2B2B),
+                      fillColor: const Color(0xFF0C7779),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: const BorderSide(
-                          color: Color(0xFF00C853),
+                          color: Color(0xFF3BC1A8),
                           width: 1,
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: const BorderSide(
-                          color: Color(0xFF00C853),
+                          color: Color(0xFF3BC1A8),
                           width: 2,
                         ),
                       ),
@@ -139,11 +139,11 @@ class _AuthPageState extends State<AuthPage> {
                       decoration: InputDecoration(
                         hintText: 'Full Name',
                         filled: true,
-                        fillColor: const Color(0xFF2B2B2B),
+                        fillColor: const Color(0xFF0C7779),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: const BorderSide(
-                            color: Color(0xFF00C853),
+                            color: Color(0xFF3BC1A8),
                             width: 1,
                           ),
                         ),
@@ -164,11 +164,11 @@ class _AuthPageState extends State<AuthPage> {
                       decoration: InputDecoration(
                         hintText: 'User Type',
                         filled: true,
-                        fillColor: const Color(0xFF2B2B2B),
+                        fillColor: const Color(0xFF0C7779),
                         border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12),
                           borderSide: const BorderSide(
-                            color: Color(0xFF00C853),
+                            color: Color(0xFF3BC1A8),
                             width: 1,
                           ),
                         ),
@@ -194,8 +194,8 @@ class _AuthPageState extends State<AuthPage> {
                   ElevatedButton(
                     onPressed: _isLoading ? null : _authenticate,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF00C853),
-                      foregroundColor: const Color(0xFF1B1B1B),
+                      backgroundColor: const Color(0xFF3BC1A8),
+                      foregroundColor: const Color(0xFF061E29),
                       padding: const EdgeInsets.symmetric(
                         horizontal: 48,
                         vertical: 16,
@@ -211,7 +211,7 @@ class _AuthPageState extends State<AuthPage> {
                             child: CircularProgressIndicator(
                               strokeWidth: 2,
                               valueColor: AlwaysStoppedAnimation(
-                                Color(0xFF1B1B1B),
+                                Color(0xFF061E29),
                               ),
                             ),
                           )
@@ -224,7 +224,7 @@ class _AuthPageState extends State<AuthPage> {
                       _isLogin
                           ? "Don't have an account? Sign up"
                           : 'Already have an account? Sign in',
-                      style: const TextStyle(color: Color(0xFF00C853)),
+                      style: const TextStyle(color: Color(0xFF3BC1A8)),
                     ),
                   ),
                 ],

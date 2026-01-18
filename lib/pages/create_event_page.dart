@@ -44,8 +44,8 @@ class _CreateEventPageState extends State<CreateEventPage> {
         return Theme(
           data: ThemeData.dark().copyWith(
             colorScheme: const ColorScheme.dark(
-              primary: Color(0xFF00C853),
-              surface: Color(0xFF2B2B2B),
+              primary: Color(0xFF3BC1A8),
+              surface: Color(0xFF0C7779),
             ),
           ),
           child: child!,
@@ -61,8 +61,8 @@ class _CreateEventPageState extends State<CreateEventPage> {
           return Theme(
             data: ThemeData.dark().copyWith(
               colorScheme: const ColorScheme.dark(
-                primary: Color(0xFF00C853),
-                surface: Color(0xFF2B2B2B),
+                primary: Color(0xFF3BC1A8),
+                surface: Color(0xFF0C7779),
               ),
             ),
             child: child!,
@@ -142,12 +142,12 @@ class _CreateEventPageState extends State<CreateEventPage> {
       appBar: AppBar(
         title: const Text(
           'Create Event',
-          style: TextStyle(color: Color(0xFF00C853)),
+          style: TextStyle(color: Color(0xFF3BC1A8)),
         ),
-        backgroundColor: const Color(0xFF1B1B1B),
+        backgroundColor: const Color(0xFF061E29),
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF00C853)),
+          icon: const Icon(Icons.arrow_back, color: Color(0xFF3BC1A8)),
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -221,15 +221,15 @@ class _CreateEventPageState extends State<CreateEventPage> {
                         vertical: 16,
                       ),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2B2B2B),
+                        color: const Color(0xFF0C7779),
                         borderRadius: BorderRadius.circular(25),
-                        border: Border.all(color: const Color(0xFF00C853)),
+                        border: Border.all(color: const Color(0xFF3BC1A8)),
                       ),
                       child: Row(
                         children: [
                           const Icon(
                             Icons.calendar_today,
-                            color: Color(0xFF00C853),
+                            color: Color(0xFF3BC1A8),
                           ),
                           const SizedBox(width: 12),
                           Expanded(
@@ -305,14 +305,14 @@ class _CreateEventPageState extends State<CreateEventPage> {
                   _isLoading
                       ? const Center(
                           child: CupertinoActivityIndicator(
-                            color: Color(0xFF00C853),
+                            color: Color(0xFF3BC1A8),
                             radius: 16,
                           ),
                         )
                       : ElevatedButton(
                           onPressed: _createEvent,
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF00C853),
+                            backgroundColor: const Color(0xFF3BC1A8),
                             minimumSize: const Size(double.infinity, 56),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25),
@@ -350,17 +350,17 @@ class _CreateEventPageState extends State<CreateEventPage> {
       style: const TextStyle(color: Colors.white),
       validator: validator,
       decoration: InputDecoration(
-        prefixIcon: Icon(icon, color: const Color(0xFF00C853)),
+        prefixIcon: Icon(icon, color: const Color(0xFF3BC1A8)),
         labelText: label,
         hintText: hint,
-        labelStyle: const TextStyle(color: Color(0xFF00C853)),
+        labelStyle: const TextStyle(color: Color(0xFF3BC1A8)),
         hintStyle: const TextStyle(color: Colors.grey),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xFF00C853)),
+          borderSide: const BorderSide(color: Color(0xFF3BC1A8)),
           borderRadius: BorderRadius.circular(25),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xFF00C853), width: 2),
+          borderSide: const BorderSide(color: Color(0xFF3BC1A8), width: 2),
           borderRadius: BorderRadius.circular(25),
         ),
         errorBorder: OutlineInputBorder(
@@ -372,7 +372,7 @@ class _CreateEventPageState extends State<CreateEventPage> {
           borderRadius: BorderRadius.circular(25),
         ),
         filled: true,
-        fillColor: const Color(0xFF2B2B2B),
+        fillColor: const Color(0xFF0C7779),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 16,

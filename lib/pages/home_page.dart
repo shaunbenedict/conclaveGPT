@@ -51,13 +51,13 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text(
           'Conclave GPT',
-          style: TextStyle(color: Color(0xFF00C853)),
+          style: TextStyle(color: Color(0xFF3BC1A8)),
         ),
-        backgroundColor: const Color(0xFF1B1B1B),
+        backgroundColor: const Color(0xFF061E29),
         elevation: 0,
         actions: [
           IconButton(
-            icon: const Icon(Icons.logout, color: Color(0xFF00C853)),
+            icon: const Icon(Icons.logout, color: Color(0xFF3BC1A8)),
             onPressed: () async {
               await FirebaseAuth.instance.signOut();
               if (context.mounted) {
@@ -77,12 +77,12 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: Container(
         margin: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: const Color(0xFF2B2B2B),
+          color: const Color(0xFF0C7779),
           borderRadius: BorderRadius.circular(30),
-          border: Border.all(color: const Color(0xFF00C853), width: 1),
+          border: Border.all(color: const Color(0xFF3BC1A8), width: 1),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF00C853).withOpacity(0.3),
+              color: const Color(0xFF3BC1A8).withOpacity(0.3),
               blurRadius: 20,
               spreadRadius: 0,
             ),
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
 
               return CupertinoTabBar(
                 backgroundColor: Colors.transparent,
-                activeColor: const Color(0xFF00C853),
+                activeColor: const Color(0xFF3BC1A8),
                 inactiveColor: Colors.grey,
                 currentIndex: _selectedIndex,
                 onTap: (index) {
@@ -155,7 +155,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   },
-                  backgroundColor: const Color(0xFF00C853),
+                  backgroundColor: const Color(0xFF3BC1A8),
                   icon: const Icon(Icons.add, color: Colors.black, size: 28),
                   label: const Text(
                     'Event',
@@ -181,10 +181,10 @@ class _HomePageState extends State<HomePage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Card(
-            color: const Color(0xFF2B2B2B),
+            color: const Color(0xFF0C7779),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(16),
-              side: const BorderSide(color: Color(0xFF00C853), width: 1),
+              side: const BorderSide(color: Color(0xFF3BC1A8), width: 1),
             ),
             child: Padding(
               padding: const EdgeInsets.all(16.0),
@@ -193,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                   CircleAvatar(
                     radius: 40,
                     backgroundImage: AssetImage(_randomAvatar),
-                    backgroundColor: const Color(0xFF00C853),
+                    backgroundColor: const Color(0xFF3BC1A8),
                   ),
                   const SizedBox(width: 16),
                   Expanded(
@@ -215,7 +215,7 @@ class _HomePageState extends State<HomePage> {
                             Text(
                               userName,
                               style: const TextStyle(
-                                color: Color(0xFF00C853),
+                                color: Color(0xFF3BC1A8),
                                 fontSize: 22,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -237,11 +237,11 @@ class _HomePageState extends State<HomePage> {
                                 ),
                                 decoration: BoxDecoration(
                                   color: const Color(
-                                    0xFF00C853,
+                                    0xFF3BC1A8,
                                   ).withOpacity(0.2),
                                   borderRadius: BorderRadius.circular(12),
                                   border: Border.all(
-                                    color: const Color(0xFF00C853),
+                                    color: const Color(0xFF3BC1A8),
                                     width: 1,
                                   ),
                                 ),
@@ -250,7 +250,7 @@ class _HomePageState extends State<HomePage> {
                                       ? 'Organizer'
                                       : 'Participant',
                                   style: const TextStyle(
-                                    color: Color(0xFF00C853),
+                                    color: Color(0xFF3BC1A8),
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -325,7 +325,7 @@ class _HomePageState extends State<HomePage> {
                       const Text(
                         'Upcoming RSVP\'d Events',
                         style: TextStyle(
-                          color: Color(0xFF00C853),
+                          color: Color(0xFF3BC1A8),
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
@@ -344,13 +344,13 @@ class _HomePageState extends State<HomePage> {
                                 if (eventSnapshot.connectionState ==
                                     ConnectionState.waiting) {
                                   return const Card(
-                                    color: Color(0xFF2B2B2B),
+                                    color: Color(0xFF0C7779),
                                     margin: EdgeInsets.only(bottom: 16),
                                     child: Padding(
                                       padding: EdgeInsets.all(16.0),
                                       child: Center(
                                         child: CupertinoActivityIndicator(
-                                          color: Color(0xFF00C853),
+                                          color: Color(0xFF3BC1A8),
                                         ),
                                       ),
                                     ),
@@ -367,12 +367,12 @@ class _HomePageState extends State<HomePage> {
                                         as Map<String, dynamic>;
 
                                 return Card(
-                                  color: const Color(0xFF2B2B2B),
+                                  color: const Color(0xFF0C7779),
                                   margin: const EdgeInsets.only(bottom: 16),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(16),
                                     side: const BorderSide(
-                                      color: Color(0xFF00C853),
+                                      color: Color(0xFF3BC1A8),
                                       width: 1,
                                     ),
                                   ),
@@ -385,7 +385,7 @@ class _HomePageState extends State<HomePage> {
                                         Text(
                                           eventData['name'] ?? 'Untitled Event',
                                           style: const TextStyle(
-                                            color: Color(0xFF00C853),
+                                            color: Color(0xFF3BC1A8),
                                             fontSize: 20,
                                             fontWeight: FontWeight.bold,
                                           ),
@@ -434,7 +434,7 @@ class _HomePageState extends State<HomePage> {
                                               child: ElevatedButton.icon(
                                                 style: ElevatedButton.styleFrom(
                                                   backgroundColor: const Color(
-                                                    0xFF00C853,
+                                                    0xFF3BC1A8,
                                                   ),
                                                   foregroundColor: Colors.black,
                                                   padding:
@@ -496,7 +496,7 @@ class _HomePageState extends State<HomePage> {
                     const Text(
                       'Your Upcoming Events',
                       style: TextStyle(
-                        color: Color(0xFF00C853),
+                        color: Color(0xFF3BC1A8),
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
@@ -520,7 +520,7 @@ class _HomePageState extends State<HomePage> {
                               ConnectionState.waiting) {
                             return const Center(
                               child: CupertinoActivityIndicator(
-                                color: Color(0xFF00C853),
+                                color: Color(0xFF3BC1A8),
                               ),
                             );
                           }
@@ -565,12 +565,12 @@ class _HomePageState extends State<HomePage> {
                                   event.data() as Map<String, dynamic>;
 
                               return Card(
-                                color: const Color(0xFF2B2B2B),
+                                color: const Color(0xFF0C7779),
                                 margin: const EdgeInsets.only(bottom: 16),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16),
                                   side: const BorderSide(
-                                    color: Color(0xFF00C853),
+                                    color: Color(0xFF3BC1A8),
                                     width: 1,
                                   ),
                                 ),
@@ -583,7 +583,7 @@ class _HomePageState extends State<HomePage> {
                                       Text(
                                         eventData['name'] ?? 'Untitled Event',
                                         style: const TextStyle(
-                                          color: Color(0xFF00C853),
+                                          color: Color(0xFF3BC1A8),
                                           fontSize: 20,
                                           fontWeight: FontWeight.bold,
                                         ),
@@ -646,7 +646,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return const Center(
-            child: CupertinoActivityIndicator(color: Color(0xFF00C853)),
+            child: CupertinoActivityIndicator(color: Color(0xFF3BC1A8)),
           );
         }
 
@@ -662,7 +662,7 @@ class _HomePageState extends State<HomePage> {
                 const Text(
                   'Your Events',
                   style: TextStyle(
-                    color: Color(0xFF00C853),
+                    color: Color(0xFF3BC1A8),
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
@@ -685,7 +685,7 @@ class _HomePageState extends State<HomePage> {
                       if (snapshot.connectionState == ConnectionState.waiting) {
                         return const Center(
                           child: CupertinoActivityIndicator(
-                            color: Color(0xFF00C853),
+                            color: Color(0xFF3BC1A8),
                           ),
                         );
                       }
@@ -729,12 +729,12 @@ class _HomePageState extends State<HomePage> {
                               eventDoc.data() as Map<String, dynamic>;
 
                           return Card(
-                            color: const Color(0xFF2B2B2B),
+                            color: const Color(0xFF0C7779),
                             margin: const EdgeInsets.only(bottom: 16),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16),
                               side: const BorderSide(
-                                color: Color(0xFF00C853),
+                                color: Color(0xFF3BC1A8),
                                 width: 1,
                               ),
                             ),
@@ -746,7 +746,7 @@ class _HomePageState extends State<HomePage> {
                               title: Text(
                                 eventData['name'] ?? 'Untitled Event',
                                 style: const TextStyle(
-                                  color: Color(0xFF00C853),
+                                  color: Color(0xFF3BC1A8),
                                   fontWeight: FontWeight.bold,
                                   fontSize: 18,
                                 ),
@@ -768,7 +768,7 @@ class _HomePageState extends State<HomePage> {
                               ),
                               trailing: const Icon(
                                 Icons.arrow_forward_ios,
-                                color: Color(0xFF00C853),
+                                color: Color(0xFF3BC1A8),
                                 size: 16,
                               ),
                               onTap: () {
@@ -803,7 +803,7 @@ class _HomePageState extends State<HomePage> {
                     const Text(
                       'Your Chats',
                       style: TextStyle(
-                        color: Color(0xFF00C853),
+                        color: Color(0xFF3BC1A8),
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
@@ -820,11 +820,11 @@ class _HomePageState extends State<HomePage> {
                       },
                       icon: const Icon(
                         Icons.add_circle_outline,
-                        color: Color(0xFF00C853),
+                        color: Color(0xFF3BC1A8),
                       ),
                       label: const Text(
                         'New',
-                        style: TextStyle(color: Color(0xFF00C853)),
+                        style: TextStyle(color: Color(0xFF3BC1A8)),
                       ),
                     ),
                   ],
@@ -842,7 +842,7 @@ class _HomePageState extends State<HomePage> {
                       if (snapshot.connectionState == ConnectionState.waiting) {
                         return const Center(
                           child: CupertinoActivityIndicator(
-                            color: Color(0xFF00C853),
+                            color: Color(0xFF3BC1A8),
                           ),
                         );
                       }
@@ -855,13 +855,13 @@ class _HomePageState extends State<HomePage> {
                               const Icon(
                                 CupertinoIcons.chat_bubble_text_fill,
                                 size: 80,
-                                color: Color(0xFF00C853),
+                                color: Color(0xFF3BC1A8),
                               ),
                               const SizedBox(height: 24),
                               const Text(
                                 'Start chatting with ConclaveGPT',
                                 style: TextStyle(
-                                  color: Color(0xFF00C853),
+                                  color: Color(0xFF3BC1A8),
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -869,7 +869,7 @@ class _HomePageState extends State<HomePage> {
                               const SizedBox(height: 32),
                               ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xFF00C853),
+                                  backgroundColor: const Color(0xFF3BC1A8),
                                   foregroundColor: Colors.black,
                                   padding: const EdgeInsets.symmetric(
                                     horizontal: 32,
@@ -952,12 +952,12 @@ class _HomePageState extends State<HomePage> {
                               }
 
                               return Card(
-                                color: const Color(0xFF2B2B2B),
+                                color: const Color(0xFF0C7779),
                                 margin: const EdgeInsets.only(bottom: 12),
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(12),
                                   side: const BorderSide(
-                                    color: Color(0xFF00C853),
+                                    color: Color(0xFF3BC1A8),
                                     width: 1,
                                   ),
                                 ),
@@ -967,7 +967,7 @@ class _HomePageState extends State<HomePage> {
                                     vertical: 8,
                                   ),
                                   leading: const CircleAvatar(
-                                    backgroundColor: Color(0xFF00C853),
+                                    backgroundColor: Color(0xFF3BC1A8),
                                     child: Icon(
                                       CupertinoIcons.chat_bubble_text,
                                       color: Colors.black,
@@ -976,7 +976,7 @@ class _HomePageState extends State<HomePage> {
                                   title: Text(
                                     title,
                                     style: const TextStyle(
-                                      color: Color(0xFF00C853),
+                                      color: Color(0xFF3BC1A8),
                                       fontWeight: FontWeight.bold,
                                       fontSize: 16,
                                     ),
@@ -997,7 +997,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   trailing: const Icon(
                                     Icons.arrow_forward_ios,
-                                    color: Color(0xFF00C853),
+                                    color: Color(0xFF3BC1A8),
                                     size: 16,
                                   ),
                                   onTap: () {
@@ -1038,7 +1038,7 @@ class _HomePageState extends State<HomePage> {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               return const Center(
-                child: CupertinoActivityIndicator(color: Color(0xFF00C853)),
+                child: CupertinoActivityIndicator(color: Color(0xFF3BC1A8)),
               );
             }
 
@@ -1071,13 +1071,13 @@ class _HomePageState extends State<HomePage> {
                           CircleAvatar(
                             radius: 60,
                             backgroundImage: AssetImage(_randomAvatar),
-                            backgroundColor: const Color(0xFF00C853),
+                            backgroundColor: const Color(0xFF3BC1A8),
                           ),
                           const SizedBox(height: 20),
                           Text(
                             name,
                             style: const TextStyle(
-                              color: Color(0xFF00C853),
+                              color: Color(0xFF3BC1A8),
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
                             ),
@@ -1090,10 +1090,10 @@ class _HomePageState extends State<HomePage> {
                                 vertical: 6,
                               ),
                               decoration: BoxDecoration(
-                                color: const Color(0xFF00C853).withOpacity(0.2),
+                                color: const Color(0xFF3BC1A8).withOpacity(0.2),
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(
-                                  color: const Color(0xFF00C853),
+                                  color: const Color(0xFF3BC1A8),
                                   width: 1,
                                 ),
                               ),
@@ -1102,7 +1102,7 @@ class _HomePageState extends State<HomePage> {
                                     ? 'Organizer'
                                     : 'Participant',
                                 style: const TextStyle(
-                                  color: Color(0xFF00C853),
+                                  color: Color(0xFF3BC1A8),
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -1119,7 +1119,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       decoration: BoxDecoration(
                         border: Border.all(
-                          color: const Color(0xFF00C853),
+                          color: const Color(0xFF3BC1A8),
                           width: 1,
                         ),
                         borderRadius: BorderRadius.circular(20),
@@ -1127,7 +1127,7 @@ class _HomePageState extends State<HomePage> {
                       child: Text(
                         '${userEvents.length} 🏆',
                         style: const TextStyle(
-                          color: Color(0xFF00C853),
+                          color: Color(0xFF3BC1A8),
                           fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
@@ -1138,11 +1138,11 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(height: 40),
                 Center(
                   child: Card(
-                    color: const Color(0xFF2B2B2B),
+                    color: const Color(0xFF0C7779),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
                       side: const BorderSide(
-                        color: Color(0xFF00C853),
+                        color: Color(0xFF3BC1A8),
                         width: 1,
                       ),
                     ),
@@ -1181,7 +1181,7 @@ class _HomePageState extends State<HomePage> {
         Text(
           label,
           style: const TextStyle(
-            color: Color(0xFF00C853),
+            color: Color(0xFF3BC1A8),
             fontSize: 14,
             fontWeight: FontWeight.bold,
           ),
@@ -1203,7 +1203,7 @@ class _HomePageState extends State<HomePage> {
             child: Text(
               '$label:',
               style: const TextStyle(
-                color: Color(0xFF00C853),
+                color: Color(0xFF3BC1A8),
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
