@@ -300,8 +300,6 @@ MIT License — See LICENSE file
 
 **ConclaveGPT** — Built for the Hackathon Challenge with a mission to make events accessible to everyone.
 
-**Contact:** [your-email@example.com]
-
 ---
 
 ## 🙏 Acknowledgments
