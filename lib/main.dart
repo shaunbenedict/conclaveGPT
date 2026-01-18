@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'ConclaveGPT',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3BC1A8)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFFAEB92)),
         useMaterial3: true,
-        scaffoldBackgroundColor: const Color(0xFF061E29),
+        scaffoldBackgroundColor: const Color(0xFF000000),
       ),
       home: const SplashScreen(),
     );
@@ -74,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
             const SizedBox(height: 30),
             const CupertinoActivityIndicator(
               radius: 16,
-              color: Color(0xFF3BC1A8),
+              color: Color(0xFFFAEB92),
             ),
           ],
         ),
@@ -200,7 +200,7 @@ class _LoginPageState extends State<LoginPage> {
                     Text(
                       _isLogin ? 'Welcome Back' : 'Create Account',
                       style: const TextStyle(
-                        color: Color(0xFF3BC1A8),
+                        color: Color(0xFFFAEB92),
                         fontSize: 32,
                         fontWeight: FontWeight.bold,
                       ),
@@ -259,10 +259,10 @@ class _LoginPageState extends State<LoginPage> {
                           const SizedBox(height: 16),
                           Container(
                             decoration: BoxDecoration(
-                              color: const Color(0xFF0C7779),
+                              color: const Color(0xFF36656B),
                               borderRadius: BorderRadius.circular(25),
                               border: Border.all(
-                                color: const Color(0xFF3BC1A8),
+                                color: const Color(0xFFFAEB92),
                               ),
                             ),
                             padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -270,14 +270,14 @@ class _LoginPageState extends State<LoginPage> {
                               children: [
                                 const Icon(
                                   Icons.badge,
-                                  color: Color(0xFF3BC1A8),
+                                  color: Color(0xFFFAEB92),
                                 ),
                                 const SizedBox(width: 12),
                                 Expanded(
                                   child: DropdownButtonHideUnderline(
                                     child: DropdownButton<String>(
                                       value: _userType,
-                                      dropdownColor: const Color(0xFF0C7779),
+                                      dropdownColor: const Color(0xFF36656B),
                                       style: const TextStyle(
                                         color: Colors.white,
                                       ),
@@ -307,13 +307,13 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     _isLoading
                         ? const CupertinoActivityIndicator(
-                            color: Color(0xFF3BC1A8),
+                            color: Color(0xFFFAEB92),
                             radius: 16,
                           )
                         : ElevatedButton(
                             onPressed: _isLogin ? _handleLogin : _handleSignUp,
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF3BC1A8),
+                              backgroundColor: const Color(0xFFFAEB92),
                               minimumSize: const Size(double.infinity, 50),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
@@ -349,7 +349,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text(
                             _isLogin ? 'Sign Up' : 'Login',
                             style: const TextStyle(
-                              color: Color(0xFF3BC1A8),
+                              color: Color(0xFFFAEB92),
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -379,15 +379,15 @@ class _LoginPageState extends State<LoginPage> {
       enabled: enabled,
       style: const TextStyle(color: Colors.white),
       decoration: InputDecoration(
-        prefixIcon: Icon(icon, color: const Color(0xFF3BC1A8)),
+        prefixIcon: Icon(icon, color: const Color(0xFFFAEB92)),
         hintText: hint,
         hintStyle: const TextStyle(color: Colors.grey),
         enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xFF3BC1A8)),
+          borderSide: const BorderSide(color: Color(0xFFFAEB92)),
           borderRadius: BorderRadius.circular(25),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: Color(0xFF3BC1A8), width: 2),
+          borderSide: const BorderSide(color: Color(0xFFFAEB92), width: 2),
           borderRadius: BorderRadius.circular(25),
         ),
         disabledBorder: OutlineInputBorder(
@@ -395,7 +395,7 @@ class _LoginPageState extends State<LoginPage> {
           borderRadius: BorderRadius.circular(25),
         ),
         filled: true,
-        fillColor: const Color(0xFF0C7779),
+        fillColor: const Color(0xFF36656B),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 16,
           vertical: 12,

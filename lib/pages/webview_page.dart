@@ -56,12 +56,12 @@ class _WebViewPageState extends State<WebViewPage> {
       appBar: AppBar(
         title: Text(
           widget.title,
-          style: const TextStyle(color: Color(0xFF3BC1A8)),
+          style: const TextStyle(color: Color(0xFFFAEB92)),
         ),
-        backgroundColor: const Color(0xFF061E29),
+        backgroundColor: const Color(0xFF000000),
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF3BC1A8)),
+          icon: const Icon(Icons.arrow_back, color: Color(0xFFFAEB92)),
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -71,7 +71,7 @@ class _WebViewPageState extends State<WebViewPage> {
           if (_isLoading)
             const Center(
               child: CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF3BC1A8)),
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFAEB92)),
               ),
             ),
         ],

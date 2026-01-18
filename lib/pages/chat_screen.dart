@@ -5,10 +5,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_ai/firebase_ai.dart';
 
 class ChatScreen extends StatefulWidget {
-  const ChatScreen({super.key, required this.user, this.createNew = false});
+  const ChatScreen({
+    super.key,
+    required this.user,
+    this.createNew = false,
+    this.chatId,
+  });
 
   final User? user;
   final bool createNew;
+  final String? chatId;
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -101,6 +107,14 @@ class _ChatScreenState extends State<ChatScreen> {
 
   Future<void> _loadOrCreateChat() async {
     if (widget.user == null) return;
+
+    // If chatId is provided, use it
+    if (widget.chatId != null) {
+      setState(() {
+        _currentChatId = widget.chatId!;
+      });
+      return;
+    }
 
     // If createNew is true, always create a new chat
     if (widget.createNew) {
@@ -257,7 +271,7 @@ User message:
   Widget build(BuildContext context) {
     if (widget.user == null) {
       return Scaffold(
-        backgroundColor: const Color(0xFF061E29),
+        backgroundColor: const Color(0xFF000000),
         body: const Center(
           child: Text(
             'Please sign in to chat.',
@@ -272,18 +286,18 @@ User message:
     ).orderBy('createdAt', descending: true).snapshots();
 
     return Scaffold(
-      backgroundColor: const Color(0xFF061E29),
+      backgroundColor: const Color(0xFF000000),
       appBar: AppBar(
-        title: const Text('Chat', style: TextStyle(color: Color(0xFF3BC1A8))),
-        backgroundColor: const Color(0xFF061E29),
+        title: const Text('Chat', style: TextStyle(color: Color(0xFFFAEB92))),
+        backgroundColor: const Color(0xFF000000),
         elevation: 0,
-        iconTheme: const IconThemeData(color: Color(0xFF3BC1A8)),
+        iconTheme: const IconThemeData(color: Color(0xFFFAEB92)),
         actions: [
           TextButton(
             onPressed: _createNewChat,
             child: const Text(
               'New Chat',
-              style: TextStyle(color: Color(0xFF3BC1A8), fontSize: 14),
+              style: TextStyle(color: Color(0xFFFAEB92), fontSize: 14),
             ),
           ),
           const SizedBox(width: 8),
@@ -302,7 +316,7 @@ User message:
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       return const Center(
                         child: CupertinoActivityIndicator(
-                          color: Color(0xFF3BC1A8),
+                          color: Color(0xFFFAEB92),
                         ),
                       );
                     }
@@ -350,15 +364,15 @@ User message:
                 padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: const Color(0xFF0C7779),
+                    color: const Color(0xFF36656B),
                     borderRadius: BorderRadius.circular(28),
                     border: Border.all(
-                      color: const Color(0xFF3BC1A8),
+                      color: const Color(0xFFFAEB92),
                       width: 1,
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: const Color(0xFF3BC1A8).withOpacity(0.25),
+                        color: const Color(0xFFFAEB92).withOpacity(0.25),
                         blurRadius: 16,
                         offset: const Offset(0, 6),
                       ),
@@ -377,6 +391,7 @@ User message:
                           maxLines: 4,
                           decoration: const InputDecoration(
                             hintText: 'Type a message...',
+                            hintStyle: const TextStyle(color: Colors.white),
                             border: InputBorder.none,
                           ),
                           style: const TextStyle(color: Colors.white),
@@ -387,9 +402,9 @@ User message:
                         onPressed: _isSending ? null : _sendMessage,
                         icon: _isSending
                             ? const CupertinoActivityIndicator(
-                                color: Color(0xFF3BC1A8),
+                                color: Color(0xFFFAEB92),
                               )
-                            : const Icon(Icons.send, color: Color(0xFF3BC1A8)),
+                            : const Icon(Icons.send, color: Color(0xFFFAEB92)),
                       ),
                     ],
                   ),
@@ -411,11 +426,11 @@ User message:
       constraints: const BoxConstraints(maxWidth: 280),
       padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
       decoration: BoxDecoration(
-        color: isUser ? const Color(0xFF3BC1A8) : const Color(0xFF0C7779),
+        color: isUser ? const Color(0xFFFAEB92) : const Color(0xFF36656B),
         borderRadius: BorderRadius.circular(16),
         border: isUser
             ? null
-            : Border.all(color: const Color(0xFF3BC1A8), width: 1),
+            : Border.all(color: const Color(0xFFFAEB92), width: 1),
       ),
       child: _buildStyledText(text, isUser),
     );
@@ -427,8 +442,8 @@ User message:
               alignment: Alignment.centerLeft,
               child: TextButton.icon(
                 style: TextButton.styleFrom(
-                  foregroundColor: const Color(0xFF3BC1A8),
-                  side: const BorderSide(color: Color(0xFF3BC1A8)),
+                  foregroundColor: const Color(0xFFFAEB92),
+                  side: const BorderSide(color: Color(0xFFFAEB92)),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -519,7 +534,7 @@ User message:
                 Text(
                   data['name'] ?? 'Untitled Event',
                   style: const TextStyle(
-                    color: Color(0xFF3BC1A8),
+                    color: Color(0xFFFAEB92),
                     fontSize: 20,
                     fontWeight: FontWeight.w700,
                   ),
@@ -539,7 +554,7 @@ User message:
                       child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
                           foregroundColor: Colors.grey[200],
-                          side: const BorderSide(color: Color(0xFF3BC1A8)),
+                          side: const BorderSide(color: Color(0xFFFAEB92)),
                         ),
                         onPressed: () => Navigator.of(ctx).pop(),
                         child: const Text('Cancel'),
@@ -549,7 +564,7 @@ User message:
                     Expanded(
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFF3BC1A8),
+                          backgroundColor: const Color(0xFFFAEB92),
                           foregroundColor: Colors.black,
                         ),
                         onPressed: () async {
@@ -616,7 +631,7 @@ User message:
             child: Text(
               '$label:',
               style: const TextStyle(
-                color: Color(0xFF3BC1A8),
+                color: Color(0xFFFAEB92),
                 fontWeight: FontWeight.w700,
               ),
             ),

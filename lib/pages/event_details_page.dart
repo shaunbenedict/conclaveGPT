@@ -17,16 +17,16 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF061E29),
+      backgroundColor: const Color(0xFF000000),
       appBar: AppBar(
         title: const Text(
           'Event Details',
-          style: TextStyle(color: Color(0xFF3BC1A8)),
+          style: TextStyle(color: Color(0xFFFAEB92)),
         ),
-        backgroundColor: const Color(0xFF061E29),
+        backgroundColor: const Color(0xFF000000),
         elevation: 0,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF3BC1A8)),
+          icon: const Icon(Icons.arrow_back, color: Color(0xFFFAEB92)),
           onPressed: () => Navigator.pop(context),
         ),
       ),
@@ -38,7 +38,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
         builder: (context, eventSnapshot) {
           if (eventSnapshot.connectionState == ConnectionState.waiting) {
             return const Center(
-              child: CupertinoActivityIndicator(color: Color(0xFF3BC1A8)),
+              child: CupertinoActivityIndicator(color: Color(0xFFFAEB92)),
             );
           }
 
@@ -61,7 +61,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                 Text(
                   eventData['name'] ?? 'Untitled Event',
                   style: const TextStyle(
-                    color: Color(0xFF3BC1A8),
+                    color: Color(0xFFFAEB92),
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
@@ -83,11 +83,11 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
         ? 'N/A'
         : value.toString();
     return Card(
-      color: const Color(0xFF0C7779),
+      color: const Color(0xFF36656B),
       margin: const EdgeInsets.only(bottom: 12),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        side: const BorderSide(color: Color(0xFF3BC1A8), width: 1),
+        side: const BorderSide(color: Color(0xFFFAEB92), width: 1),
       ),
       child: Padding(
         padding: const EdgeInsets.all(16),
@@ -97,7 +97,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
             Text(
               label,
               style: const TextStyle(
-                color: Color(0xFF3BC1A8),
+                color: Color(0xFFFAEB92),
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
@@ -115,10 +115,10 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
 
   Widget _buildEventDetailsCard(Map<String, dynamic> eventData) {
     return Card(
-      color: const Color(0xFF0C7779),
+      color: const Color(0xFF36656B),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        side: const BorderSide(color: Color(0xFF3BC1A8), width: 1),
+        side: const BorderSide(color: Color(0xFFFAEB92), width: 1),
       ),
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -165,7 +165,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
         Text(
           label,
           style: const TextStyle(
-            color: Color(0xFF3BC1A8),
+            color: Color(0xFFFAEB92),
             fontSize: 12,
             fontWeight: FontWeight.bold,
           ),
@@ -183,7 +183,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
         const Text(
           'Registration URL',
           style: TextStyle(
-            color: Color(0xFF3BC1A8),
+            color: Color(0xFFFAEB92),
             fontSize: 12,
             fontWeight: FontWeight.bold,
           ),
@@ -212,8 +212,8 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
               icon: const Icon(Icons.open_in_browser, size: 18),
               label: const Text('View'),
               style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF3BC1A8),
-                foregroundColor: const Color(0xFF061E29),
+                backgroundColor: const Color(0xFFFAEB92),
+                foregroundColor: const Color(0xFF000000),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 12,
                   vertical: 8,
@@ -235,7 +235,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(
-            child: CupertinoActivityIndicator(color: Color(0xFF3BC1A8)),
+            child: CupertinoActivityIndicator(color: Color(0xFFFAEB92)),
           );
         }
 
@@ -285,15 +285,15 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Card(
-              color: const Color(0xFF0C7779),
+              color: const Color(0xFF36656B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
-                side: const BorderSide(color: Color(0xFF3BC1A8), width: 1),
+                side: const BorderSide(color: Color(0xFFFAEB92), width: 1),
               ),
               child: const Padding(
                 padding: EdgeInsets.all(16),
                 child: Center(
-                  child: CupertinoActivityIndicator(color: Color(0xFF3BC1A8)),
+                  child: CupertinoActivityIndicator(color: Color(0xFFFAEB92)),
                 ),
               ),
             );
@@ -301,10 +301,10 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
 
           if (!snapshot.hasData) {
             return Card(
-              color: const Color(0xFF0C7779),
+              color: const Color(0xFF36656B),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
-                side: const BorderSide(color: Color(0xFF3BC1A8), width: 1),
+                side: const BorderSide(color: Color(0xFFFAEB92), width: 1),
               ),
               child: const Padding(
                 padding: EdgeInsets.all(16),
@@ -344,10 +344,10 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
   ) {
     if (rsvpUsers.isEmpty) {
       return Card(
-        color: const Color(0xFF0C7779),
+        color: const Color(0xFF36656B),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12),
-          side: const BorderSide(color: Color(0xFF3BC1A8), width: 1),
+          side: const BorderSide(color: Color(0xFFFAEB92), width: 1),
         ),
         child: const Padding(
           padding: EdgeInsets.all(16),
@@ -357,10 +357,10 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
     }
 
     return Card(
-      color: const Color(0xFF0C7779),
+      color: const Color(0xFF36656B),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
-        side: const BorderSide(color: Color(0xFF3BC1A8), width: 1),
+        side: const BorderSide(color: Color(0xFFFAEB92), width: 1),
       ),
       child: Padding(
         padding: const EdgeInsets.all(20),
@@ -373,7 +373,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                 const Text(
                   'Total RSVPs',
                   style: TextStyle(
-                    color: Color(0xFF3BC1A8),
+                    color: Color(0xFFFAEB92),
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
@@ -381,7 +381,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                 Text(
                   '${rsvpUsers.length}',
                   style: const TextStyle(
-                    color: Color(0xFF3BC1A8),
+                    color: Color(0xFFFAEB92),
                     fontSize: 28,
                     fontWeight: FontWeight.bold,
                   ),
@@ -394,7 +394,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
             const Text(
               'Attendees',
               style: TextStyle(
-                color: Color(0xFF3BC1A8),
+                color: Color(0xFFFAEB92),
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
@@ -425,7 +425,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                         child: Text(
                           'View All (${rsvpUsers.length})',
                           style: const TextStyle(
-                            color: Color(0xFF3BC1A8),
+                            color: Color(0xFFFAEB92),
                             fontWeight: FontWeight.bold,
                             fontSize: 14,
                           ),
@@ -442,11 +442,11 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                     children: [
                       CircleAvatar(
                         radius: 20,
-                        backgroundColor: const Color(0xFF3BC1A8),
+                        backgroundColor: const Color(0xFFFAEB92),
                         child: Text(
                           '${index + 1}',
                           style: const TextStyle(
-                            color: Color(0xFF061E29),
+                            color: Color(0xFF000000),
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -459,7 +459,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                             Text(
                               user['name'],
                               style: const TextStyle(
-                                color: Color(0xFF3BC1A8),
+                                color: Color(0xFFFAEB92),
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14,
                               ),
