@@ -288,19 +288,6 @@ class _CreateEventPageState extends State<CreateEventPage> {
                       return null;
                     },
                   ),
-                  const SizedBox(height: 16),
-                  _buildTextField(
-                    controller: _registrationUrlController,
-                    label: 'Registration URL',
-                    icon: Icons.link,
-                    hint: 'Link to register',
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return 'Please provide a registration URL';
-                      }
-                      return null;
-                    },
-                  ),
                   const SizedBox(height: 32),
                   _isLoading
                       ? const Center(
