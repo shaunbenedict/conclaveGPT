@@ -290,12 +290,6 @@ Contributions welcome! Please:
 
 ---
 
-## 📜 License
-
-MIT License — See LICENSE file
-
----
-
 ## 👥 Team
 
 **ConclaveGPT** — Built for the Hackathon Challenge with a mission to make events accessible to everyone.
